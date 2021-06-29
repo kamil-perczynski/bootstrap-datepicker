@@ -33,7 +33,7 @@ export const ChronoUnitStack: React.FC<ChronoUnitStackProps> = (props) => {
 
   const handleValueChange = useCallback((item: ChronoUnitStackItem) => {
     onChange && onChange(unit, item.value);
-  }, []);
+  }, [onChange]);
 
   return (
     <div ref={rootRef} className={styles.root}>

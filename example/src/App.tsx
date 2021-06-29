@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { format } from "date-fns";
-import { DatePicker, useDatePickerContainer } from "@kamil-perczynski/bootstrap-date-picker";
+import {
+  DatePicker,
+  useDatePickerContainer,
+} from "@kamil-perczynski/bootstrap-date-picker";
 import { CustomDatePicker } from "./CustomDatePicker/CustomDatePicker";
 import "@kamil-perczynski/bootstrap-date-picker/dist/index.css";
 

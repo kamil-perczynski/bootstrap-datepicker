@@ -29,7 +29,7 @@ export interface DatePickerProps {
   open?: boolean;
   value?: string;
   locale?: string;
-  onChange(fn: (currentValue: string) => string): void;
+  onChange(value: string): void;
   tr?: TranslatingFunction;
   onClose?(): void;
 }
@@ -156,29 +156,30 @@ export function useDatePickerInternals(props: DatePickerProps) {
       if (!onChange) {
         return;
       }
-      onChange((currentValue: string) => {
+      const updatedDate = (() => {
         switch (unit) {
           case "year": {
-            return setYear(new Date(currentValue), unitValue).toISOString();
+            return setYear(currentDate, unitValue);
           }
           case "month": {
-            return setMonth(new Date(currentValue), unitValue).toISOString();
+            return setMonth(currentDate, unitValue);
           }
           case "dayOfMonth": {
-            return setDate(new Date(currentValue), unitValue).toISOString();
+            return setDate(currentDate, unitValue);
           }
           case "hour": {
-            return setHours(new Date(currentValue), unitValue).toISOString();
+            return setHours(currentDate, unitValue);
           }
           case "minute": {
-            return setMinutes(new Date(currentValue), unitValue).toISOString();
+            return setMinutes(currentDate, unitValue);
           }
           default:
             throw new Error();
         }
-      });
+      })();
+      onChange(updatedDate.toString());
     },
-    [onChange]
+    [onChange, currentDate]
   );
 
   const handleKeyDown = useCallback(
