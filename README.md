@@ -10,6 +10,10 @@
 npm install --save @kamil-perczynski/bootstrap-date-picker
 ```
 
+## Demo
+
+https://codepen.io/kamil-perczynski/pen/RwVwEXz
+
 ## Usage
 
 ```tsx
