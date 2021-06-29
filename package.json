@@ -1,10 +1,13 @@
 {
-  "name": "bootstrap-datepicker",
+  "name": "@kamil-perczynski/bootstrap-date-picker",
   "version": "1.0.0",
   "description": "Made with create-react-library",
   "author": "kamil-perczynski",
   "license": "MIT",
-  "repository": "kamil-perczynski/bootstrap-datepicker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamil-perczynski/bootstrap-datepicker.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
@@ -62,5 +65,12 @@
   ],
   "dependencies": {
     "date-fns": "^2.22.1"
+  },
+  "bugs": {
+    "url": "https://github.com/kamil-perczynski/bootstrap-datepicker/issues"
+  },
+  "homepage": "https://github.com/kamil-perczynski/bootstrap-datepicker#readme",
+  "directories": {
+    "example": "example"
   }
 }

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { format } from "date-fns";
-import { DatePicker, useDatePickerContainer } from "bootstrap-datepicker";
+import { DatePicker, useDatePickerContainer } from "@kamil-perczynski/bootstrap-date-picker";
 import { CustomDatePicker } from "./CustomDatePicker/CustomDatePicker";
-import "bootstrap-datepicker/dist/index.css";
+import "@kamil-perczynski/bootstrap-date-picker/dist/index.css";
 
 const App = () => {
   const [months, setMonths] = useState("2012-12");

@@ -3,7 +3,7 @@ import {
   ChronoUnitStack,
   DatePickerProps,
   useDatePickerInternals,
-} from "bootstrap-datepicker";
+} from "@kamil-perczynski/bootstrap-date-picker";
 import styles from "./CustomDatePicker.module.css";
 interface Props extends DatePickerProps {}
 

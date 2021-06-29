@@ -1,13 +1,13 @@
-# bootstrap-datepicker
+# @kamil-perczynski/bootstrap-date-picker
 
 > Made with create-react-library
 
-[![NPM](https://img.shields.io/npm/v/bootstrap-datepicker.svg)](https://www.npmjs.com/package/bootstrap-datepicker) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@kamil-perczynski/bootstrap-date-picker.svg)](https://www.npmjs.com/package/@kamil-perczynski/bootstrap-date-picker) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save bootstrap-datepicker
+npm install --save @kamil-perczynski/bootstrap-date-picker
 ```
 
 ## Usage
@@ -15,8 +15,8 @@ npm install --save bootstrap-datepicker
 ```tsx
 import React, { useState } from "react";
 import { format } from "date-fns";
-import { DatePicker, useDatePickerContainer } from "bootstrap-datepicker";
-import "bootstrap-datepicker/dist/index.css";
+import { DatePicker, useDatePickerContainer } from "@kamil-perczynski/bootstrap-date-picker";
+import "@kamil-perczynski/bootstrap-date-picker/dist/index.css";
 
 const DatePickerFormGroup: React.FC<any> = () => {
   const [isOpen, setOpen] = useState(false);
