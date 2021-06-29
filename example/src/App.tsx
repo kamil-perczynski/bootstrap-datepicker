@@ -32,7 +32,7 @@ const App = () => {
   );
 };
 
-const DatePickerFormGroup: React.FC<any> = (props: { type: any }) => {
+const DatePickerFormGroup: React.FC<any> = () => {
   const [isOpen, setOpen] = useState(false);
   const [value, setValue] = useState("2021-05-03T12:00");
 
@@ -54,7 +54,7 @@ const DatePickerFormGroup: React.FC<any> = (props: { type: any }) => {
         className="form-control bg-white"
       />
       <DatePicker
-        type={props.type}
+        type="localdatetime"
         open={isOpen}
         onClose={() => setOpen(false)}
         value={value}

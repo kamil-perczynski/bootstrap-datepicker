@@ -13,16 +13,43 @@ npm install --save bootstrap-datepicker
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React, { useState } from "react";
+import { format } from "date-fns";
+import { DatePicker, useDatePickerContainer } from "bootstrap-datepicker";
+import "bootstrap-datepicker/dist/index.css";
 
-import MyComponent from 'bootstrap-datepicker'
-import 'bootstrap-datepicker/dist/index.css'
+const DatePickerFormGroup: React.FC<any> = () => {
+  const [isOpen, setOpen] = useState(false);
+  const [value, setValue] = useState("2021-05-03T12:00");
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+  const focuser = useDatePickerContainer(() => setOpen(false));
+
+  return (
+    <div
+      onClick={focuser.onClick}
+      onBlur={focuser.onBlur}
+      ref={focuser.containerRef}
+      className="form-group"
+    >
+      <label htmlFor="date-1">Pick a date:</label>
+      <input
+        value={format(new Date(value), "dd.MM.yyyy HH:mm")}
+        onFocus={() => setOpen(true)}
+        id="date-1"
+        readOnly
+        className="form-control bg-white"
+      />
+      <DatePicker
+        type="localdatetime"
+        open={isOpen}
+        onClose={() => setOpen(false)}
+        value={value}
+        onChange={setValue}
+        locale="hr-HR"
+      />
+    </div>
+  );
+};
 ```
 
 ## License
