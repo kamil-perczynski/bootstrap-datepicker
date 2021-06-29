@@ -115,7 +115,7 @@ export const DatePicker: React.FC<DatePickerProps> = (props) => {
 };
 
 export function useDatePickerInternals(props: DatePickerProps) {
-  const { value, open, onClose, onChange } = props;
+  const { value, open, onClose, onChange, type } = props;
   const tr = useMemo(() => {
     if (props.tr) return props.tr;
     if (props.locale) {
@@ -177,7 +177,12 @@ export function useDatePickerInternals(props: DatePickerProps) {
             throw new Error();
         }
       })();
-      onChange(updatedDate.toString());
+
+      onChange(
+        type === "localdate"
+          ? updatedDate.toISOString().substring(0, 10)
+          : updatedDate.toISOString()
+      );
     },
     [onChange, currentDate]
   );

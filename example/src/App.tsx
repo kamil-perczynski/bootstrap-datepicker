@@ -35,7 +35,7 @@ const App = () => {
   );
 };
 
-const DatePickerFormGroup: React.FC<any> = () => {
+const DatePickerFormGroup: React.FC<any> = ({ type }: { type: any }) => {
   const [isOpen, setOpen] = useState(false);
   const [value, setValue] = useState("2021-05-03T12:00");
 
@@ -50,14 +50,17 @@ const DatePickerFormGroup: React.FC<any> = () => {
     >
       <label htmlFor="date-1">Pick a date:</label>
       <input
-        value={format(new Date(value), "dd.MM.yyyy HH:mm")}
+        value={format(
+          new Date(value),
+          type === "localdate" ? "dd.MM.yyyy" : "dd.MM.yyyy HH:mm"
+        )}
         onFocus={() => setOpen(true)}
         id="date-1"
         readOnly
         className="form-control bg-white"
       />
       <DatePicker
-        type="localdatetime"
+        type={type}
         open={isOpen}
         onClose={() => setOpen(false)}
         value={value}
