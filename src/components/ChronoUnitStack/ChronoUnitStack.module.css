@@ -1,0 +1,14 @@
+.root {
+  max-height: 285px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.root * {
+    margin: 2px 0
+}
+
+.root::-webkit-scrollbar {
+  display: none;
+}

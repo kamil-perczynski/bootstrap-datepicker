@@ -1,0 +1,26 @@
+.monthCalendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 45px);
+  grid-template-rows: 30px repeat(6, 40px);
+  gap: 4px;
+  text-align: center;
+}
+
+.dayOfMonthButton {
+  height: 100%;
+}
+
+.dayOfMonthGhostButton {
+  appearance: none;
+  background: none;
+  border: none;
+}
+
+.dayOfMonthButton:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px var(--primary);
+  box-shadow: 0px 0px 0px 2px var(--primary);
+}
+
+.dayOfMonthCelebration:not(.btn-primary from global) {
+  color: var(--red);
+}
