@@ -65,7 +65,7 @@ const DatePickerFormGroup: React.FC<any> = ({ type }: { type: any }) => {
         onClose={() => setOpen(false)}
         value={value}
         onChange={setValue}
-        locale="hr-HR"
+        locale="hr"
       />
     </div>
   );

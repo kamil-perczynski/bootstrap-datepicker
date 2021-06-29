@@ -19,7 +19,7 @@ export const defaultTranslations = (locale: string) => {
     },
     month: {
       hr: "Mjesec",
-      en: "Year",
+      en: "Month",
       pl: "Miesiąc",
     },
     dayOfMonth: {

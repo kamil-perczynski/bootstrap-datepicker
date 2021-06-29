@@ -126,7 +126,7 @@ export function useDatePickerInternals(props: DatePickerProps) {
   }, [props.locale, props.tr]);
 
   const years = useMemo(yearsStack, []);
-  const months = useMemo(() => monthsStack(tr), []);
+  const months = useMemo(() => monthsStack(tr), [tr]);
   const hours = useMemo(hoursStack, []);
   const minutes = useMemo(minutesStack, []);
 
